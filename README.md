@@ -1,4 +1,4 @@
-# AlgoCasts
+# JavaScript Algorithm practice Questions and Solutions
 
 ## Useful Helper Methods
 
