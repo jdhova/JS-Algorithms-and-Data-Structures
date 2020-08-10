@@ -17,12 +17,56 @@
 //   if (str === rev) return true;
 // };
 
-function palindrome(str) {
+// function palindrome(str) {
+//   let emp = '';
+//   for (let c of str) {
+//     emp = c + emp;
+//   }
+//   if (str === emp) return true;
+// }
+
+// const palindrome = (str) => {
+//   let emp = '';
+//   for (let c of str) {
+//     emp = c + emp;
+//   }
+//   if (str === emp) return true;
+// };
+
+const palindrome = (str) => {
   let emp = '';
   for (let c of str) {
     emp = c + emp;
   }
-  if (str === emp) return true;
-}
+  if (emp === str) return true;
+};
+
+// const palindrome = (str) => {
+//   return str.split('').every((chr, i) => {
+//     if (chr === str[str.length - i - 1]) return true;
+//   });
+// };
+
+// function palindrome(str) {
+//   return str.split('').every((char, i) => {
+//     return char === str[str.length - i - 1];
+//   });
+// }
+
+// const palindrome = (str) => {
+//   let emp = '';
+//   for (let c of str) {
+//     emp = c + emp;
+//   }
+//   if (str === emp) return true;
+// };
+
+// function reverseString(str) {
+//   const newString = '';
+//   for (var i = str.length - 1; i >= 0; i--) {
+//     newString += str[i];
+//   }
+//   if (newString === str) return true;
+// }
 
 module.exports = palindrome;
