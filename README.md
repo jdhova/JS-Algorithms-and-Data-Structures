@@ -39,4 +39,36 @@ return parseInt(empty) * Math.sign(jude);
 };
 ```
 
+### Max Character in String
+
+#### First start by looping the string and saving key and key value pair in Object
+
+#### Loop tru Object and compare if Key value pair is greated then 0 then asign the key to maxC
+
+```
+
+const maxChar = (str) => {
+  const mChar = {};
+  let max = 0;
+  let maxC = '';
+
+  for (let x of str) {
+    if (mChar[x]) {
+      mChar[x]++;
+    } else {
+      mChar[x] = 1;
+    }
+  }
+
+  for (let c in mChar) {
+    if (mChar[c] > max) {
+      max = mChar[c];
+      maxC = c;
+    }
+  }
+  return maxC;
+};
+
+```
+
 Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)
