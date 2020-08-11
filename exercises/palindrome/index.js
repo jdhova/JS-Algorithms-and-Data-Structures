@@ -17,6 +17,15 @@
 //   if (str === rev) return true;
 // };
 
+const palindrome = (str) => {
+  let rev = '';
+
+  for (let n of str) {
+    rev = n + rev;
+  }
+  if (rev === str) return true;
+};
+
 // function palindrome(str) {
 //   let emp = '';
 //   for (let c of str) {
@@ -33,13 +42,13 @@
 //   if (str === emp) return true;
 // };
 
-const palindrome = (str) => {
-  let emp = '';
-  for (let c of str) {
-    emp = c + emp;
-  }
-  if (emp === str) return true;
-};
+// const palindrome = (str) => {
+//   let emp = '';
+//   for (let c of str) {
+//     emp = c + emp;
+//   }
+//   if (emp === str) return true;
+// };
 
 // const palindrome = (str) => {
 //   return str.split('').every((chr, i) => {

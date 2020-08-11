@@ -71,4 +71,35 @@ const maxChar = (str) => {
 
 ```
 
-Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)
+#### chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
+
+#### chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+
+#### we start by creating an empty chunk
+
+#### then loop over the array
+
+#### we check the last letter in the chunk ans save in variable
+
+#### if chunk is empty of not full then we add element to chuk
+
+#### if its full we create new chunk and add by pushing element to last.
+
+```
+const chunk = (array, size) => {
+  let chunked = [];
+  for (let n of array) {
+    let last = chunked[chunked.length - 1];
+
+    if (!last || last.length === size) {
+      chunked.push([n]);
+    } else {
+      last.push(n);
+    }
+  }
+  return chunked;
+};
+
+```
+
+<!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->

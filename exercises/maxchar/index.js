@@ -27,25 +27,47 @@
 // }
 
 const maxChar = (str) => {
-  const mChar = {};
+  const mxChar = {};
   let max = 0;
   let maxC = '';
 
-  for (let x of str) {
-    if (mChar[x]) {
-      mChar[x]++;
+  for (let n of str) {
+    if (mxChar[n]) {
+      mxChar[n]++;
     } else {
-      mChar[x] = 1;
+      mxChar[n] = 1;
     }
   }
 
-  for (let c in mChar) {
-    if (mChar[c] > max) {
-      max = mChar[c];
-      maxC = c;
+  for (let x in mxChar) {
+    if (mxChar[x] > max) {
+      max = mxChar[x];
+      maxC = x;
     }
   }
   return maxC;
 };
+
+// const maxChar = (str) => {
+//   const mChar = {};
+//   let max = 0;
+//   let maxC = '';
+
+//   for (let x of str) {
+//     if (mChar[x]) {
+//       mChar[x]++;
+//     } else {
+//       mChar[x] = 1;
+//     }
+//   }
+
+//   for (let c in mChar) {
+//     if (mChar[c] > max) {
+//       max = mChar[c];
+//       maxC = c;
+//     }
+//   }
+//   return maxC;
+// };
 
 module.exports = maxChar;

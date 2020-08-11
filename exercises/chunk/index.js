@@ -8,6 +8,38 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+// we start by creating an empty chunk
+// then loop over the array
+// we check the last letter in the chunk ans save in variable
+// if chunk is empty of  not full then we add element to chuk
+// if its full we create new chunk and add by pushing element to last.
+
+// const chunk = (array, size) => {
+//   const chunked = [];
+
+//   for (let n of array) {
+//     let last = chunked[chunked.length - 1];
+//     if (!last || last.length === size) {
+//       chunked.push([n]);
+//     } else {
+//       last.push(n);
+//     }
+//   }
+//   return chunked;
+// };
+
+const chunk = (array, size) => {
+  let chunked = [];
+  for (let n of array) {
+    let last = chunked[chunked.length - 1];
+
+    if (!last || last.length === size) {
+      chunked.push([n]);
+    } else {
+      last.push(n);
+    }
+  }
+  return chunked;
+};
 
 module.exports = chunk;
