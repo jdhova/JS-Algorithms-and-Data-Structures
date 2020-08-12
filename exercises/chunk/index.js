@@ -28,18 +28,18 @@
 //   return chunked;
 // };
 
-const chunk = (array, size) => {
-  let chunked = [];
-  for (let n of array) {
-    let last = chunked[chunked.length - 1];
+// const chunk = (array, size) => {
+//   let chunked = [];
+//   for (let n of array) {
+//     let last = chunked[chunked.length - 1];
 
-    if (!last || last.length === size) {
-      chunked.push([n]);
-    } else {
-      last.push(n);
-    }
-  }
-  return chunked;
-};
+//     if (!last || last.length === size) {
+//       chunked.push([n]);
+//     } else {
+//       last.push(n);
+//     }
+//   }
+//   return chunked;
+// };
 
 module.exports = chunk;

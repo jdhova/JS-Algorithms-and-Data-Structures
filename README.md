@@ -79,9 +79,9 @@ const maxChar = (str) => {
 
 #### then loop over the array
 
-#### we check the last letter in the chunk ans save in variable
+#### we check the last letter in the chunk and save in variable
 
-#### if chunk is empty of not full then we add element to chuk
+#### if chunk is empty of not full then we add element to chunk
 
 #### if its full we create new chunk and add by pushing element to last.
 
