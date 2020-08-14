@@ -102,4 +102,16 @@ const chunk = (array, size) => {
 
 ```
 
+#### Anagrams check if ('RAIL! SAFETY!', 'fairy tales') --> True
+
+```
+const anagrams = (stringA, stringB) => {
+  return cleanStr(stringA) === cleanStr(stringB);
+};
+
+const cleanStr = (str) => {
+  return str.replace(/[ˆ\w]/g, '').toLowerCase().split('').sort().join('');
+};
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->

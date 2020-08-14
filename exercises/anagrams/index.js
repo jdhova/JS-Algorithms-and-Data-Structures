@@ -8,6 +8,16 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// use Regex to check first and remove the spaces.
+// first step loop tru the string A and B and save ket and value pairs in Objest
+// looop tru object and compare if key value pair and key are same
+
+const anagrams = (stringA, stringB) => {
+  return cleanStr(stringA) === cleanStr(stringB);
+};
+
+const cleanStr = (str) => {
+  return str.replace(/[ˆ\w]/g, '').toLowerCase().split('').sort().join('');
+};
 
 module.exports = anagrams;
