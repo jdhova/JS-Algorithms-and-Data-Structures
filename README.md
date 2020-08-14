@@ -102,7 +102,7 @@ const chunk = (array, size) => {
 
 ```
 
-#### Anagrams check if ('RAIL! SAFETY!', 'fairy tales') --> True
+### Anagrams check if ('RAIL! SAFETY!', 'fairy tales') --> True
 
 ```
 const anagrams = (stringA, stringB) => {
@@ -114,7 +114,7 @@ const cleanStr = (str) => {
 };
 ```
 
-#### capitalize('i love coding') --> 'I Love Coding'
+### Capitalize ('i love coding') --> 'I Love Coding'
 
 ```
 
