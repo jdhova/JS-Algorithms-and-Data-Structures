@@ -114,4 +114,18 @@ const cleanStr = (str) => {
 };
 ```
 
+#### capitalize('i love coding') --> 'I Love Coding'
+
+```
+
+const capitalize = (str) => {
+  const words = [];
+  for (let word of str.split(' ')) {
+    words.push(word[0].toUpperCase() + word.slice(1));
+  }
+
+  return words.join(' ');
+};
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
