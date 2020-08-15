@@ -28,6 +28,16 @@
 //   return chunked;
 // };
 
+// #### we start by creating an empty chunk
+
+// #### then loop over the array
+
+// #### we check the last letter in the chunk and save in variable
+
+// #### if chunk is empty of not full then we add element to chunk
+
+// #### if its full we create new chunk and add by pushing element to last.
+
 const chunk = (array, size) => {
   let chunked = [];
   for (let n of array) {
