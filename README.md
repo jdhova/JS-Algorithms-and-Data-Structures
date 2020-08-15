@@ -75,16 +75,6 @@ const maxChar = (str) => {
 
 #### chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
 
-#### we start by creating an empty chunk
-
-#### then loop over the array
-
-#### we check the last letter in the chunk and save in variable
-
-#### if chunk is empty of not full then we add element to chunk
-
-#### if its full we create new chunk and add by pushing element to last.
-
 ```
 const chunk = (array, size) => {
   let chunked = [];
@@ -125,6 +115,26 @@ const capitalize = (str) => {
   }
 
   return words.join(' ');
+};
+```
+
+#### Create steps with recussusion
+
+```
+const steps = (n, row = 0, stairs = '') => {
+  if (n === row) {
+    return;
+  }
+  if (n === stairs.length) {
+    console.log(stairs);
+    return steps(n, row + 1);
+  }
+  if (stairs.length <= row) {
+    stairs += '#';
+  } else {
+    stairs += ' ';
+  }
+  steps(n, row, stairs);
 };
 ```
 
