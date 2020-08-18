@@ -16,8 +16,8 @@
 
 function pyramid(n) {}
 
-const pyramid = (n) => {
-  return;
-};
+// const pyramid = (n) => {
+//   return;
+// };
 
 module.exports = pyramid;

@@ -17,20 +17,37 @@
 //       '### '
 //       '####'
 
-const steps = (n, row = 0, stairs = '') => {
-  if (n === row) {
-    return;
-  }
-  if (n === stairs.length) {
-    console.log(stairs);
+// const steps = (n, row = 0, stairs = '') => {
+//   if (n === row) {
+//     return;
+//   }
+//   if (n === stairs.length) {
+//     console.log(stairs);
+//     return steps(n, row + 1);
+//   }
+//   if (stairs.length <= row) {
+//     stairs += '#';
+//   } else {
+//     stairs += ' ';
+//   }
+//   steps(n, row, stairs);
+// };
+
+const steps = (n, row = 0, stair = '') => {
+  if (n === row) return; /// kill it here base case
+
+  if (n === stair.length) {
+    console.log(stair);
     return steps(n, row + 1);
   }
-  if (stairs.length <= row) {
-    stairs += '#';
+
+  if (stair.length <= row) {
+    stair += '#';
   } else {
-    stairs += ' ';
+    stair += ' ';
   }
-  steps(n, row, stairs);
+
+  steps(n, row, stair);
 };
 
 module.exports = steps;
