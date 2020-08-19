@@ -138,4 +138,29 @@ const steps = (n, row = 0, stairs = '') => {
 };
 ```
 
+#### Pyramid
+
+````
+const pyramid = (n, row = 0, level = '') => {
+  if (row === n) return;
+
+  if (level.length === 2 * n - 1) {
+    console.log(level);
+    return pyramid(n, row + 1);
+  }
+  const midpoint = Math.floor((2 * n - 1) / 2);
+  let add;
+  if (midpoint - row <= level.length && midpoint + row >= level.length) {
+    add = '#';
+  } else {
+    add = ' ';
+  }
+  pyramid(n, row, level + add);
+};
+
+```
+
+
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
+````
