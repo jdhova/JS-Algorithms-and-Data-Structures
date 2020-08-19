@@ -140,7 +140,14 @@ const steps = (n, row = 0, stairs = '') => {
 
 #### Pyramid
 
-````
+```
+    #
+   ###
+  #####
+ #######
+#########
+
+
 const pyramid = (n, row = 0, level = '') => {
   if (row === n) return;
 
@@ -160,7 +167,8 @@ const pyramid = (n, row = 0, level = '') => {
 
 ```
 
-
-
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
-````
+
+```
+
+```
