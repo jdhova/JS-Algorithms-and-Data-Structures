@@ -121,6 +121,12 @@ const capitalize = (str) => {
 #### Create steps with recussusion
 
 ```
+#
+##
+###
+####
+#####
+
 const steps = (n, row = 0, stairs = '') => {
   if (n === row) {
     return;
