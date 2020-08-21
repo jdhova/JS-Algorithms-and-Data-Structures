@@ -173,8 +173,20 @@ const pyramid = (n, row = 0, level = '') => {
 
 ```
 
+#### Find vowels with Regex
+
+g helps find all vowels
+i helps with case sensitive so we dont need.toLowerCase()
+
+```
+const str = 'hello my name is jude'
+const vowels = (str) => {
+  const vw = str.match(/[aeiou]/gi);
+  return vw ? vw.length : 0;
+};
+
+vowels(str)
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
-
-```
-
-```
