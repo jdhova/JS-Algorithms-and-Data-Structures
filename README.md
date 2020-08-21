@@ -67,7 +67,7 @@ const maxChar = (str) => {
 
 ```
 
-### chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+### Chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
 
 ```
 const chunk = (array, size) => {
@@ -206,7 +206,7 @@ fib(10)
 
 ```
 
-#### Fibonacci return last digit recussive solution
+### Fibonacci return last digit recussive solution
 
 ```
 const fib = (n) => {
@@ -214,6 +214,34 @@ const fib = (n) => {
 
   return fib(n - 1) + fib(n - 2);
 };
+
+```
+
+### Fib seq Memoization
+
+```
+const memoize = (fn) => {
+  const memory = {};
+
+  return function (...args) {
+    if (memory[args]) {
+      return memory[args];
+    }
+
+    const result = fn.apply(this, args);
+    memory[args] = result;
+
+    return result;
+  };
+};
+const slowfib = (n) => {
+  if (n < 2) return n;
+
+  return slowfib(n - 1) + slowfib(n - 2);
+};
+
+
+slowfib(10)
 
 ```
 

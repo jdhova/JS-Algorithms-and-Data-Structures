@@ -23,7 +23,7 @@
 //   return result[result.length - 1];
 // }
 
-function memoize(fn) {
+const memoize = (fn) => {
   const memory = {};
 
   return function (...args) {
@@ -36,7 +36,7 @@ function memoize(fn) {
 
     return result;
   };
-}
+};
 const slowfib = (n) => {
   if (n < 2) return n;
 
