@@ -189,4 +189,38 @@ vowels(str)
 
 ```
 
+#### Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+
+```
+function fib(n) {
+const result = [0, 1];
+
+for (let i = 2; i <= n; i++) {
+const a = result[result.length - 1];
+const b = result[result.length - 2];
+
+    sum = a + b;
+
+    result.push(sum);
+
+}
+console.log(result)
+// return result[result.length - 1];
+}
+
+fib(10)
+
+```
+
+#### Fibonacci return last digit recussive solution
+
+```
+const fib = (n) => {
+  if (n < 2) return n;
+
+  return fib(n - 1) + fib(n - 2);
+};
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
