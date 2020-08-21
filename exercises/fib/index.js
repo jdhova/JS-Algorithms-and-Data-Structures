@@ -23,10 +23,26 @@
 //   return result[result.length - 1];
 // }
 
-const fib = (n) => {
+function memoize(fn) {
+  const memory = {};
+
+  return function (...args) {
+    if (memory[args]) {
+      return memory[args];
+    }
+
+    const result = fn.apply(this, args);
+    memory[args] = result;
+
+    return result;
+  };
+}
+const slowfib = (n) => {
   if (n < 2) return n;
 
   return fib(n - 1) + fib(n - 2);
 };
+
+const fib = memoize(slowfib);
 
 module.exports = fib;
