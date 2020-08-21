@@ -41,10 +41,6 @@ return parseInt(empty) * Math.sign(jude);
 
 ### Max Character in String
 
-#### First start by looping the string and saving key and key value pair in Object
-
-#### Loop tru Object and compare if Key value pair is greated then 0 then asign the key to maxC
-
 ```
 
 const maxChar = (str) => {
@@ -71,9 +67,7 @@ const maxChar = (str) => {
 
 ```
 
-#### chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
-
-#### chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+### chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
 
 ```
 const chunk = (array, size) => {
@@ -118,7 +112,7 @@ const capitalize = (str) => {
 };
 ```
 
-#### Create steps with recussusion
+### Create steps with recussusion
 
 ```
 #
@@ -144,7 +138,7 @@ const steps = (n, row = 0, stairs = '') => {
 };
 ```
 
-#### Pyramid
+### Pyramid
 
 ```
     #
@@ -173,7 +167,7 @@ const pyramid = (n, row = 0, level = '') => {
 
 ```
 
-#### Find vowels with Regex
+### Find vowels with Regex
 
 g helps find all vowels
 i helps with case sensitive so we dont need.toLowerCase()
@@ -189,7 +183,7 @@ vowels(str)
 
 ```
 
-#### Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+### Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
 
 ```
 function fib(n) {
