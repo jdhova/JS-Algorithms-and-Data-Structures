@@ -249,7 +249,7 @@ slowfib(10)
 
 #### Queues are similar to JS arrays, but with Ques we transform Arrays to classes, Hide its methods and expose only the Add with .unshift() and Remove() with .pop()
 
-#### With this new version of Arrays we can control how we arrange and maniulate data in data strctures. Queue ==> FIFO & Stack ==> LIFO or FILO.
+#### With this new version of Arrays we can control how we arrange and maniulate data in data strctures. Queue ==> FIFO
 
 ```
 class Queue {
@@ -268,5 +268,35 @@ class Queue {
 }
 
 ```
+
+#### Stack ==> LIFO or FILO.
+
+```
+class Stack {
+  constructor() {
+    this.data = [];
+  }
+  push(record) {
+    this.data.push(record);
+  }
+  pop() {
+    return this.data.pop();
+  }
+  peek() {
+    return this.data[this.data.length - 1];
+  }
+}
+
+```
+
+#### The add with unshift() method on the class adds record to the start of the data. FIFO
+
+#### The push() method on the class adds a record to the End of data array. LIFO or FILO
+
+#### remove() and pop() removes data which is on top..used for both LIFO & FIFO
+
+#### peek() aims at the last data...used for both LIFO & FIFO
+
+#### This way the othr Array methos are headen making our new class limited in efficiency.
 
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
