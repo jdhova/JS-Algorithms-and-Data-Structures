@@ -39,4 +39,38 @@ function weave(sourceOne, sourceTwo) {
   return q;
 }
 
+//// weaveStack using Stacks
+
+// class Stack{
+//  constructor(){
+//     this.data = []
+
+//   }
+//   add(info){
+//     this.data.push(info)
+//   }
+
+//   remove(){
+//     return this.data.shift()
+//   }
+
+//   peek(){
+//     return this.data[this.data.length -1 ]
+//   }
+// }
+
+// function weaveStack(boxone, boxtwo) {
+//   const n = new Stack()
+
+//   while(boxone.peek() || boxtwo.peek()) {
+//     if(boxone.peek()){
+//       n.unshift(boxone.remove)
+//     }
+
+//     if(boxtwo.peek){
+//       n.unshift(boxtwo.remove)
+//     }
+//     return n
+//   }
+
 module.exports = weave;
