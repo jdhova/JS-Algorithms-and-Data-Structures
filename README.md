@@ -269,6 +269,49 @@ class Queue {
 
 ```
 
+#### Queue Version 2 FIFO
+
+```
+class Queue{
+  constructor(){
+    this.data = []
+    this.count = 0
+  }
+
+  add(element){
+    this.data.unshift(element)
+   console.log(element)
+  }
+
+   remove(){
+     const rem = this.data.pop()
+     console.log(rem)
+     return rem
+   }
+
+   checkEmpty(){
+     if(!this.data.length) {
+       console.log('Queue is Empty')
+     } else{
+       console.log('Queue has content')
+     }
+   }
+
+}
+
+const jude = new Queue
+
+jude.add(1000)
+jude.add(2000)
+jude.add(3000)
+jude.checkEmpty()
+jude.remove()
+jude.remove()
+jude.remove()
+jude.checkEmpty()
+
+```
+
 #### Stack ==> LIFO or FILO.
 
 ```
@@ -295,7 +338,7 @@ class Stack {
 class Stack {
   constructor() {
     this.data = [];
-    this.couny = 0;
+    this.count = 0;
   }
   // add element to stack
   add(element) {
@@ -368,15 +411,5 @@ jude.isCleared();
 jude.checkEmpty();
 
 ```
-
-#### The add with unshift() method on the class adds record to the start of the data. FIFO
-
-#### The push() method on the class adds a record to the End of data array. LIFO or FILO
-
-#### remove() and pop() removes data which is on top..used for both LIFO & FIFO
-
-#### peek() aims at the last data...used for both LIFO & FIFO
-
-#### This way the other Array methos are hidden making our new class limited in efficiency and safer.
 
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
