@@ -340,25 +340,20 @@ class Stack {
     this.data = [];
     this.count = 0;
   }
-  // add element to stack
   add(element) {
     this.data.push(element);
     console.log(`${element} is added to Stack`);
   }
-
-  // remove element from stack
   remove() {
     if (this.data.length == 0) return undefined;
     const rem = this.data.pop();
     console.log(`${rem} is removed from stack`);
   }
-  // peek at the top element
   peek() {
     const peek = this.data[this.data.length - 1];
     console.log(`We have ${peek} at the top level of stack`);
     return peek;
   }
-  // check if stack is empty
   checkEmpty() {
     if (!this.data.length) {
       console.log('Stack empty');
@@ -366,7 +361,6 @@ class Stack {
       console.log('Stack full');
     }
   }
-  // print the stack content
   printStack() {
     let str = '';
     for (let x = 0; x < this.data.length; x++) {
@@ -375,7 +369,6 @@ class Stack {
     }
     return str;
   }
-  // print the number at level 4
   whichStack() {
     let str = '';
     for (let x = 0; x < this.data.length; x++) {
@@ -383,7 +376,6 @@ class Stack {
     }
     return str;
   }
-  // clear stack
   isCleared() {
     this.data = [];
     this.count = 0;
