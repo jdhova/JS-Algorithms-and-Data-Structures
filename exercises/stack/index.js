@@ -25,70 +25,81 @@ class Stack {
   }
 }
 
-/// Another version of Stacks
+// version 2 stack
+
 class Stack {
   constructor() {
-    this.items = [];
-    this.count = 0;
+    this.data = [];
+    this.couny = 0;
+  }
+  // add element to stack
+  add(element) {
+    this.data.push(element);
+    console.log(`${element} is added to Stack`);
   }
 
-  push(element) {
-    this.items[this.count];
-    console.log(` ${element} is at level ${this.count}`);
-    this.count += 1;
-    return this.count - 1;
+  // remove element from stack
+  remove() {
+    if (this.data.length == 0) return undefined;
+    const rem = this.data.pop();
+    console.log(`${rem} is removed from stack`);
   }
-
-  // remove(){
-  //   if (this.count == 0) return undefined
-
-  //   let del= this.items[this.count -1 ]
-  //   this.count -= 1
-
-  //     console.log(del)
-
-  //     return del
-  // }
-
-  // pop(){
-  //   if(this.count === 0 ) return undefined
-
-  //   let delItem = this.items[this.count -1]
-  //   this.count -=1
-
-  //   console.log(delItem)
-  //   return delItem
-
-  // }
-
-  pop() {
-    if (this.count == 0) return undefined;
-    let nn = this.items.pop();
-    console.log(nn);
-    return nn;
-  }
-
-  // peek(){
-  //   if(this.count == 0)  return undefined
-  //   let bb = this.items[this.items.length - 1]
-  //   console.log(bb)
-  //   return bb
-  // }
+  // peek at the top element
 
   peek() {
-    let boy = this.items[this.count - 1];
+    const peek = this.data[this.data.length - 1];
+    console.log(`We have ${peek} at the top level of stack`);
+    return peek;
+  }
+  // check if stack is empty
+  checkEmpty() {
+    if (!this.data.length) {
+      console.log('Stack empty');
+    } else {
+      console.log('Stack full');
+    }
+  }
+  // print the stack content
+  printStack() {
+    let str = '';
+    for (let x = 0; x < this.data.length; x++) {
+      // console.log(this.data[2])
+      str += this.data[x] + ' ';
+    }
+    return str;
+  }
+  // print the number at level 3
+  whichStack() {
+    let str = '';
+    for (let x = 0; x < this.data.length; x++) {
+      console.log(this.data[3]);
+    }
+    return str;
+  }
+  // clear stack
+  isCleared() {
+    this.data = [];
+    this.count = 0;
+    console.log('data cleared');
+    return this.data;
   }
 }
 
 const jude = new Stack();
 
-jude.push('jude');
-jude.push(200);
-jude.push(300);
+jude.add(1000);
+jude.add(2000);
+jude.add(3000);
+jude.add(4000);
+console.log(jude.printStack());
+jude.checkEmpty();
+jude.whichStack();
+// jude.isCleared();
+jude.checkEmpty();
+
+jude.remove();
+jude.remove();
 
 jude.peek();
-
-// jude.pop()
-// jude.pop()
-
+jude.isCleared();
 module.exports = Stack;
