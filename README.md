@@ -393,7 +393,6 @@ jude.add(4000);
 console.log(jude.printStack());
 jude.checkEmpty();
 jude.whichStack();
-// jude.isCleared();
 
 jude.remove();
 jude.remove();

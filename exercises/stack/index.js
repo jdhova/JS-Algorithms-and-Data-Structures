@@ -69,37 +69,37 @@ class Stack {
     return str;
   }
   // print the number at level 3
-  whichStack() {
-    let str = '';
-    for (let x = 0; x < this.data.length; x++) {
-      console.log(this.data[3]);
-    }
-    return str;
-  }
-  // clear stack
-  isCleared() {
-    this.data = [];
-    this.count = 0;
-    console.log('data cleared');
-    return this.data;
-  }
-}
+//   whichStack() {
+//     let str = '';
+//     for (let x = 0; x < this.data.length; x++) {
+//       console.log(this.data[3]);
+//     }
+//     return str;
+//   }
+//   // clear stack
+//   isCleared() {
+//     this.data = [];
+//     this.count = 0;
+//     console.log('data cleared');
+//     return this.data;
+//   }
+// }
 
-const jude = new Stack();
+// const jude = new Stack();
 
-jude.add(1000);
-jude.add(2000);
-jude.add(3000);
-jude.add(4000);
-console.log(jude.printStack());
-jude.checkEmpty();
-jude.whichStack();
+// jude.add(1000);
+// jude.add(2000);
+// jude.add(3000);
+// jude.add(4000);
+// console.log(jude.printStack());
+// jude.checkEmpty();
+// jude.whichStack();
+// // jude.isCleared();
+// jude.checkEmpty();
+
+// jude.remove();
+// jude.remove();
+
+// jude.peek();
 // jude.isCleared();
-jude.checkEmpty();
-
-jude.remove();
-jude.remove();
-
-jude.peek();
-jude.isCleared();
 module.exports = Stack;
