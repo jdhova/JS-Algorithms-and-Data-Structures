@@ -403,4 +403,36 @@ jude.checkEmpty();
 
 ```
 
+### Linked List
+
+#### Insert First
+
+```
+class Node {
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = this.last = null;
+  }
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+  }
+}
+
+const nodeOne = new Node(7)
+const nodeLast = new Node(20)
+const jude = new LinkedList()
+jude.head = nodeOne
+jude.last = nodeLast
+jude.insertFirst(30)
+jude.insertFirst(40)
+console.log(jude)
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->

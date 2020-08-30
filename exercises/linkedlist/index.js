@@ -2,12 +2,6 @@
 // Implement classes Node and Linked Lists
 // See 'directions' document
 
-class Node {}
-
-class LinkedList {}
-
-/// Linked List Add
-
 class Node {
   constructor(data, next = null) {
     this.data = data;
@@ -18,16 +12,15 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
-    // this.tail = null
-    this.size = 0;
   }
-  addFirst(data) {
+  insertFirst(data) {
     this.head = new Node(data, this.head);
   }
 }
 
-const jj = new LinkedList();
-jj.addFirst(100);
-jj.addFirst(200);
+// const jude = new LinkedList();
+// jude.add();
+
+/// Linked List Add
 
 module.exports = { Node, LinkedList };
