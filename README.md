@@ -340,20 +340,24 @@ class Stack {
     this.data = [];
     this.count = 0;
   }
+
   add(element) {
     this.data.push(element);
     console.log(`${element} is added to Stack`);
   }
+
   remove() {
     if (this.data.length == 0) return undefined;
     const rem = this.data.pop();
     console.log(`${rem} is removed from stack`);
   }
+
   peek() {
     const peek = this.data[this.data.length - 1];
     console.log(`We have ${peek} at the top level of stack`);
     return peek;
   }
+
   checkEmpty() {
     if (!this.data.length) {
       console.log('Stack empty');
@@ -361,6 +365,7 @@ class Stack {
       console.log('Stack full');
     }
   }
+
   printStack() {
     let str = '';
     for (let x = 0; x < this.data.length; x++) {
@@ -369,6 +374,7 @@ class Stack {
     }
     return str;
   }
+
   whichStack() {
     let str = '';
     for (let x = 0; x < this.data.length; x++) {
@@ -376,6 +382,7 @@ class Stack {
     }
     return str;
   }
+
   isCleared() {
     this.data = [];
     this.count = 0;
@@ -417,7 +424,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    this.head = this.last = null;
+    this.head = null;
   }
   insertFirst(data) {
     this.head = new Node(data, this.head);
@@ -428,10 +435,42 @@ const nodeOne = new Node(7)
 const nodeLast = new Node(20)
 const jude = new LinkedList()
 jude.head = nodeOne
-jude.last = nodeLast
 jude.insertFirst(30)
-jude.insertFirst(40)
 console.log(jude)
+
+```
+
+#### Get Last
+
+```
+ getLast() {
+    let node1 = this.head;
+    if (!node1) {
+      return;
+    }
+    while (node1) {
+      if (!node1.next) {
+        return node1;
+      }
+      if (node1) {
+        node1 = node1.next;
+      }
+    }
+  }
+
+```
+
+#### Remove First
+
+```
+removeFirst() {
+    if (!this.head) {
+      return null;
+    }
+    if (this.head) {
+      this.head = this.head.next;
+    }
+  }
 
 ```
 
