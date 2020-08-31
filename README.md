@@ -474,4 +474,31 @@ removeFirst() {
 
 ```
 
+#### Remove Last
+
+```
+removeLast() {
+    if (!this.head) {
+      return;
+    }
+    if (!this.head.next) {
+      return (this.head = null);
+    }
+
+    let nodeOne = this.head;
+    let nodeTwo = this.head.next;
+
+    while (nodeTwo.next) {
+      nodeOne = nodeTwo;
+      nodeTwo = nodeTwo.next;
+    }
+
+    if (!nodeTwo.next) {
+      return (nodeOne.next = null);
+    }
+  }
+}
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
