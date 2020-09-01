@@ -79,16 +79,6 @@ class LinkedList {
     }
   }
 
-  // insertLast(data) {
-  //   const last = this.getLast();
-
-  //   if (last) {
-  //     last.next = new Node(data);
-  //   } else {
-  //     this.head = new Node(data);
-  //   }
-  // }
-
   insertLast(data) {
     const lastNode = this.getLast();
 
@@ -99,67 +89,57 @@ class LinkedList {
     }
   }
 
-  // insertLast(data) {
-  //   if (!this.first) {
-  //     return (this.first = new Node(data));
-  //   }
+  insertLast(data) {
+    if (!this.first) {
+      return (this.first = new Node(data));
+    }
 
-  //   if (!this.first.next) {
-  //     return (this.first.next = new Node(data));
-  //   }
+    if (!this.first.next) {
+      return (this.first.next = new Node(data));
+    }
 
-  //   let nodeOne = this.first;
-  //   let nodeTwo = this.first.next;
+    let nodeOne = this.first;
+    let nodeTwo = this.first.next;
 
-  //   while (nodeTwo.next) {
-  //     nodeOne = nodeTwo;
-  //     nodeTwo = nodeOne;
-  //   }
-  //   if (!nodeTwo) {
-  //     nodeOne.next = new Node(data);
-  //   }
-  // }
+    while (nodeTwo.next) {
+      nodeOne = nodeTwo;
+      nodeTwo = nodeOne;
+    }
+    if (!nodeTwo) {
+      nodeOne.next = new Node(data);
+    }
+  }
 
-  // removeLast() {
-  //   if (!this.head) {
-  //     return;
-  //   }
-  //   if (!this.head.next) {
-  //     return (this.head = null);
-  //   }
+  getAt(index) {
+    let counter = 0;
+    let nodeOne = this.head;
 
-  //   let nodeOne = this.head;
-  //   let nodeTwo = this.head.next;
+    while (nodeOne) {
+      if (nodeOne === index) {
+        return nodeOne;
+      }
+      counter++;
+      nodeOne = nodeOne.next;
+    }
+    if (!nodeOne) {
+      return null;
+    }
+  }
 
-  //   while (nodeTwo.next) {
-  //     nodeOne = nodeTwo;
-  //     nodeTwo = nodeTwo.next;
-  //   }
+  removeAt(index) {
+    let nodeOne = this.head;
+    let counter = 0;
 
-  //   if (!nodeTwo.next) {
-  //     return (nodeOne.next = null);
-  //   }
-  // }
-  // insertLast(data) {
-  //   if (!this.head) {
-  //     this.head = data;
-  //   }
+    while (nodeOne) {
+      if (nodeOne === index) {
+        return (nodeOne = null);
+      }
+      counter++;
+      nodeOne = nodeOne.next;
+    }
 
-  //   if (!this.head.next) {
-  //     this.head.next = data;
-  //   }
-
-  //   let nodeOne = this.head;
-  //   let nodeTwo = this.head.next;
-  //   while (nodeTwo.next) {
-  //     nodeOne = nodeTwo;
-  //     nodeTwo = nodeTwo.next;
-  //   }
-
-  //   if (!nodeTwo.next) {
-  //     nodeOne.next = data;
-  //   }
-  // }
+    if (!nodeOne) return null;
+  }
 }
 
 module.exports = { Node, LinkedList };

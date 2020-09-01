@@ -516,4 +516,25 @@ removeLast() {
 
 ```
 
+#### Get at Index
+
+```
+  getAt(index) {
+    let counter = 0;
+    let nodeOne = this.head;
+
+    while (nodeOne) {
+      if (nodeOne === index) {
+        return nodeOne;
+      }
+      counter++;
+      nodeOne = nodeOne.next;
+    }
+    if (!nodeOne) {
+      return null;
+    }
+  }
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
