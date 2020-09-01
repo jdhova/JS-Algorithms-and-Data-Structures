@@ -501,4 +501,19 @@ removeLast() {
 
 ```
 
+#### Insert Last
+
+```
+ insertLast(data) {
+    const lastNode = this.getLast();
+
+    if (!this.head) {
+      this.head = new Node(data);
+    } else {
+      lastNode.next = new Node(data);
+    }
+  }
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
