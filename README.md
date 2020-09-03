@@ -537,4 +537,34 @@ removeLast() {
 
 ```
 
+#### Generators and Inirators looping through Linklist with Generators
+
+```
+function *linkLists(){
+  yield 'linklist-1'
+  yield 'linklist-2'
+  yield 'linklist-3'
+  yield 'linklist-4'
+  yield 'linklist-5'
+  return console.log('link list completed')
+}
+
+const jude = linkLists()
+
+console.log(jude.next().value)
+console.log(jude.next().value)
+console.log(jude.next().value)
+console.log(jude.next().value)
+console.log(jude.next().value)
+console.log(jude.next())
+
+const box = []
+
+for(let val of jude){
+  box.push(val)
+}
+console.log(box)
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
