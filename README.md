@@ -551,13 +551,6 @@ function *linkLists(){
 
 const jude = linkLists()
 
-console.log(jude.next().value)
-console.log(jude.next().value)
-console.log(jude.next().value)
-console.log(jude.next().value)
-console.log(jude.next().value)
-console.log(jude.next())
-
 const box = []
 
 for(let val of jude){
