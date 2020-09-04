@@ -564,15 +564,15 @@ console.log(box)
 
 ```
 function midpoint(list) {
-  let nodeA = list.head;
-  let nodeB = list.head;
+  let slowNode = list.head;
+  let fastNode = list.head;
 
   while (list) {
-    if (nodeB.next.next && nodeB.next) {
-      nodeA = nodeA.next;
-      nodeB = nodeB.next.next;
+    if (fastNode.next && fastNode.next.next) {
+      fastNode = fastNode.next.next;
+      slowNode = slowNode.next;
     }
-    return nodeA;
+    return slowNode;
   }
 }
 
@@ -584,6 +584,7 @@ function midpoint(list) {
 function circular(list) {
   let slowNode = list.head;
   let fastNode = list.head;
+
   while (fastNode.next && fastNode.next.next) {
     slowNode = slowNode.next;
     fastNode = fastNode.next.next;
