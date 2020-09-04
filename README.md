@@ -560,4 +560,41 @@ console.log(box)
 
 ```
 
+#### Find the Midpoint of a linkedList without knowing the size.
+
+```
+function midpoint(list) {
+  let nodeA = list.head;
+  let nodeB = list.head;
+
+  while (list) {
+    if (nodeB.next.next && nodeB.next) {
+      nodeA = nodeA.next;
+      nodeB = nodeB.next.next;
+    }
+    return nodeA;
+  }
+}
+
+```
+
+#### Return True if Circular Node and false if not
+
+```
+function circular(list) {
+  let slowNode = list.head;
+  let fastNode = list.head;
+  while (fastNode.next && fastNode.next.next) {
+    slowNode = slowNode.next;
+    fastNode = fastNode.next.next;
+
+    if (slowNode === fastNode) {
+      return true;
+    }
+  }
+  return false;
+}
+
+```
+
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
