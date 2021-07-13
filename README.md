@@ -2,6 +2,23 @@
 
 ## Useful Helper Methods
 
+### Reverce a String
+
+```
+const rev = (str) => {
+  str.split().reverse().join('')
+}
+
+function(str){
+  let rev = ''
+  for(let chr of  str){
+    rev = str + rev
+    return rev
+  }
+}
+
+```
+
 ### Palindrone with .every() helper method
 
 ```
