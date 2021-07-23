@@ -67,15 +67,38 @@ pal(c,d)
 
 ```
 const reverseInt = (n) => {
-let jude = n.toString();
+let filled = n.toString();
 let empty = '';
 
-for (let x of jude) {
+for (let x of filled) {
 empty = x + empty;
 }
 
-return parseInt(empty) * Math.sign(jude);
+return parseInt(empty) * Math.sign(filled);
 };
+
+
+```
+
+### Reverse an Integer
+
+```
+
+const n = 300
+let x = n.toString()
+let z = x.split('').reverse().join('')
+let c = (parseInt(z))* Math.sign(n)
+
+console.log(c)
+
+const revin =(n) =>{
+ let z =  n.toString().split('').reverse().join('')
+ let c = (parseInt(z))* Math.sign(n)
+ return c
+}
+
+revin(-432)
+
 ```
 
 ### Max Character in String
