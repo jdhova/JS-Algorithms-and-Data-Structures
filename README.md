@@ -5,6 +5,7 @@
 ### Reverce a String
 
 ```
+
 const rev = (str) => {
   str.split().reverse().join('')
 }
@@ -17,28 +18,49 @@ function(str){
   }
 }
 
-```
 
-### Palindrone with .every() helper method
+const names = ['juud', 'grace']
 
-```
-const palindrome = (str) => {
-return str.split('').every((chr, i) => {
-if (chr === str[str.length - i - 1]) return true;
-});
-};
+let rev = []
+
+for(let n of names) {
+  rev = n + rev
+    console.log(rev)
+}
+
 ```
 
 ### Palindrone with loops
 
 ```
 const palindrome = (str) => {
-let emp = '';
+let rev = '';
 for (let c of str) {
-emp = c + emp;
+rev = c + rev;
 }
-if (emp === str) return true;
+if (rev === str) return true;
 };
+```
+
+### Palindrone Checker
+
+```
+let c = 'ruur'
+
+let d = c.split('').reverse().join('')
+
+function pal() {
+if(c === d) {
+  console.log('true',d)
+  return true
+} else{
+  console.log('false',c,d)
+}
+}
+pal(c,d)
+
+
+
 ```
 
 ### Reverce Int with loops trying to avoid .reverce() helper

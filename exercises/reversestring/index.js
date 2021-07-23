@@ -6,18 +6,6 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-// function reverse(str) {
-//   const arr = str.split('');
-//   arr.reverse();
-//   return arr.join('');
-// }
-
-// ES 6 syntax
-
-// const reverse = (str) => {
-//   return str.split('').reverse().join('');
-// };
-
 const reverse = (str) => {
   let rev = '';
   for (let c of str) {
@@ -26,17 +14,11 @@ const reverse = (str) => {
   return rev;
 };
 
-// function reverse(str) {
-//   let rev = '';
+// let rev = []
 
-//   for (i = 0; i < str.length; i++) {
-//     rev = i + rev;
-//   }
-//   debugger;
-
-//   return rev;
+// for(let n of str) {
+//   rev = n + rev
+//     console.log(rev)
 // }
-
-// reverse();
 
 module.exports = reverse;
