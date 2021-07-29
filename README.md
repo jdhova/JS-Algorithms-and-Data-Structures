@@ -10,36 +10,46 @@ const rev = (str) => {
   str.split().reverse().join('')
 }
 
-function(str){
-  let rev = ''
-  for(let chr of  str){
-    rev = str + rev
-    return rev
+const reverse = (str) => {
+  let rev = '';
+  for (let c of str) {
+    rev = c + rev;
   }
-}
+
+  return rev;
+};
+
+reverse('juud')
 
 
-const names = ['juud', 'grace']
+const names = 'juud grace'
 
-let rev = []
+let rev = ''
 
 for(let n of names) {
   rev = n + rev
     console.log(rev)
 }
-
 ```
 
 ### Palindrone with loops
 
 ```
-const palindrome = (str) => {
-let rev = '';
-for (let c of str) {
-rev = c + rev;
+const pal = (str) =>  {
+  let rev =  ''
+for(let n of str) {
+  rev = n + rev
 }
-if (rev === str) return true;
-};
+if(rev === str) {
+  return true
+} else {
+  return false
+ }
+}
+
+pal('juud') // false
+pal('juuj') // true
+
 ```
 
 ### Palindrone Checker
