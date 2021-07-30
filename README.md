@@ -69,8 +69,6 @@ if(c === d) {
 }
 pal(c,d)
 
-
-
 ```
 
 ### Reverce Int with loops trying to avoid .reverce() helper
@@ -86,7 +84,6 @@ empty = x + empty;
 
 return parseInt(empty) * Math.sign(filled);
 };
-
 
 ```
 
@@ -114,60 +111,64 @@ revin(-432)
 ### Max Character in String
 
 ```
+ str = 'hello thereeee'
 
-const maxChar = (str) => {
-  const mChar = {};
-  let max = 0;
-  let maxC = '';
+ function charM (str) {
+   const filled = {}
+   let max = 0
+   let maxChar = ''
 
-  for (let x of str) {
-    if (mChar[x]) {
-      mChar[x]++;
-    } else {
-      mChar[x] = 1;
-    }
-  }
+   for (let x of str) {
+     if(filled[x]) {
+       filled[x]++
+     } else {
+       filled[x] = 1
+     }
+   }
 
-  for (let c in mChar) {
-    if (mChar[c] > max) {
-      max = mChar[c];
-      maxC = c;
-    }
-  }
-  return maxC;
-};
+    console.log(filled)
+ for (let x in filled) {
+   if(filled[x] > max){
+     maxChar = x
+     max = filled[x]
+   }
+ }
+return maxChar
+// return max
+ }
 
-```
-
-### Chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
-
-```
-const chunk = (array, size) => {
-  let chunked = [];
-  for (let n of array) {
-    let last = chunked[chunked.length - 1];
-
-    if (!last || last.length === size) {
-      chunked.push([n]);
-    } else {
-      last.push(n);
-    }
-  }
-  return chunked;
-};
+ charM(str)
 
 ```
 
 ### Anagrams check if ('RAIL! SAFETY!', 'fairy tales') --> True
 
 ```
-const anagrams = (stringA, stringB) => {
-  return cleanStr(stringA) === cleanStr(stringB);
-};
+const str1 = 'Stressed Elbows'
+const str2 = 'Desserts Below'
 
-const cleanStr = (str) => {
-  return str.replace(/[ˆ\w]/g, '').toLowerCase().split('').sort().join('');
-};
+const cstr1 = str1.replace(/\s/g, '').split('')
+const cstr2 = str2.replace(/\s/g, '').split('')
+
+
+const anag = (cstr1,cstr2) => {
+
+  if(cstr1.length !== cstr2.length) {
+      console.log(cstr2.join(''),cstr1.join(''))
+    return false
+  }
+
+  for(let n of cstr1) {
+    if( cstr2[n] !== cstr1[n] ) {
+        console.log(cstr2.join(''),cstr1.join(''))
+      return false
+    }
+  }
+  console.log(cstr2.join(''),cstr1.join(''))
+  return true
+}
+
+anag(cstr1,cstr2)
 ```
 
 ### Capitalize ('i love coding') --> 'I Love Coding'
