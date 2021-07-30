@@ -141,7 +141,7 @@ return maxChar
 
 ```
 
-### Anagrams check if ('RAIL! SAFETY!', 'fairy tales') --> True
+### Anagrams check if ('Stressed Elbows', 'Desserts Below') --> True
 
 ```
 const str1 = 'Stressed Elbows'
