@@ -171,18 +171,16 @@ const anag = (cstr1,cstr2) => {
 anag(cstr1,cstr2)
 ```
 
-### Capitalize ('i love coding') --> 'I Love Coding'
+### Capitalize ('juud don grace') --> 'Juud Don Grace'
 
 ```
+const name = 'juud don grace'
+ const names = name.split(' ')
 
-const capitalize = (str) => {
-  const words = [];
-  for (let word of str.split(' ')) {
-    words.push(word[0].toUpperCase() + word.slice(1));
-  }
+names.forEach((a) => {
+ console.log( (a.slice(0,1).toUpperCase() + a.slice(1))
+}))
 
-  return words.join(' ');
-};
 ```
 
 ### Create steps with recussusion
@@ -209,34 +207,33 @@ const steps = (n, row = 0, stairs = '') => {
   }
   steps(n, row, stairs);
 };
-```
-
-### Pyramid
 
 ```
-    #
-   ###
-  #####
- #######
-#########
 
+### FizzBuzz with Recussion
 
-const pyramid = (n, row = 0, level = '') => {
-  if (row === n) return;
+```
+function FizzBuzz(n) {
+ if( n === 0) {
+   return
+ }
+ if(n% 3 === 0) {
+   console.log('fizz')
+ } else {
+   if (n % 5=== 0) {
+     console.log('buzz')
+   } else {
+     if(n % 15 === 0){
+       console.log('fb')
+     } else {
+       console.log(n)
+     }
+   }
+ }
+FizzBuzz (n-1)
+}
 
-  if (level.length === 2 * n - 1) {
-    console.log(level);
-    return pyramid(n, row + 1);
-  }
-  const midpoint = Math.floor((2 * n - 1) / 2);
-  let add;
-  if (midpoint - row <= level.length && midpoint + row >= level.length) {
-    add = '#';
-  } else {
-    add = ' ';
-  }
-  pyramid(n, row, level + add);
-};
+FizzBuzz(20)
 
 ```
 
@@ -282,11 +279,13 @@ fib(10)
 ### Fibonacci return last digit recussive solution
 
 ```
-const fib = (n) => {
-  if (n < 2) return n;
+function fib(n){
+  if(n <= 1)
+    return 1
 
-  return fib(n - 1) + fib(n - 2);
-};
+  return fib(n-1) + fib(n-2)
+}
+fib(4);
 
 ```
 
