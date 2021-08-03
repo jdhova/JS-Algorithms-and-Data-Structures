@@ -353,12 +353,12 @@ class Queue{
 
   add(element){
     this.data.unshift(element)
-   console.log('1st add',element)
+   console.log('Adding',element)
   }
 
    remove(){
      const rem = this.data.pop()
-     console.log('2nd remove',rem)
+     console.log('Removing',rem)
      return rem
    }
 
@@ -370,7 +370,6 @@ class Queue{
      }
    }
 
-
 peek(){
   if(!this.data.length){
     console.log('queue is empty')
@@ -378,8 +377,8 @@ peek(){
   } else {
     const first = this.data[this.data.length -1]
     const last = this.data[0]
-    console.log('first data', first)
-    console.log('last data', last)
+    console.log('first data added', first)
+    console.log('last data added', last)
     return last
   }
 }
