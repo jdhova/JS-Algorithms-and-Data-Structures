@@ -344,20 +344,21 @@ class Queue {
 #### Queue Version 2 FIFO
 
 ```
+
 class Queue{
   constructor(){
     this.data = []
-    this.count = 0
+    //this.count = 0
   }
 
   add(element){
     this.data.unshift(element)
-   console.log(element)
+   console.log('1st add',element)
   }
 
    remove(){
      const rem = this.data.pop()
-     console.log(rem)
+     console.log('2nd remove',rem)
      return rem
    }
 
@@ -369,6 +370,20 @@ class Queue{
      }
    }
 
+
+peek(){
+  if(!this.data.length){
+    console.log('queue is empty')
+    return
+  } else {
+    const first = this.data[this.data.length -1]
+    const last = this.data[0]
+    console.log('first data', first)
+    console.log('last data', last)
+    return last
+  }
+}
+
 }
 
 const jude = new Queue
@@ -376,13 +391,17 @@ const jude = new Queue
 jude.add(1000)
 jude.add(2000)
 jude.add(3000)
+jude.peek()
 jude.checkEmpty()
 jude.remove()
 jude.remove()
 jude.remove()
 jude.checkEmpty()
+jude.peek()
 
 ```
+
+// Build Visial Interface of Quete FIFO and LIFO with react.js
 
 #### Stack ==> LIFO or FILO.
 
