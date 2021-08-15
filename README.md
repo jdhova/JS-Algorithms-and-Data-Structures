@@ -364,9 +364,9 @@ class Queue{
 
    checkEmpty(){
      if(!this.data.length) {
-       console.log('Queue is Empty')
+       console.log('FIFO Queue is Empty')
      } else{
-       console.log('Queue has content')
+       console.log('FIFO Queue has content')
      }
    }
 
@@ -400,25 +400,60 @@ jude.peek()
 
 ```
 
-// Build Visial Interface of Quete FIFO and LIFO with react.js
+// Build nice Visial Interface of Quete FIFO and LIFO with react.js
 
 #### Stack ==> LIFO or FILO.
 
 ```
-class Stack {
-  constructor() {
-    this.data = [];
+class Queue{
+  constructor(){
+    this.data = []
   }
-  push(record) {
-    this.data.push(record);
+
+  addLifo(element){
+    this.data.push(element)
+    console.log('adding',element)
   }
-  pop() {
-    return this.data.pop();
+
+  removeLifo(){
+    const rem = this.data.pop()
+    console.log('removing',rem)
   }
-  peek() {
-    return this.data[this.data.length - 1];
+
+  checkEmpty(){
+    if(!this.data.length){
+      console.log('Lifo queue is empty')
+    } else {
+      console.log('Lifo queue has content')
+    }
+  }
+
+  peek(){
+    if(!this.data.length){
+      console.log('Lifo queue is empty')
+    } else {
+      const last = this.data[this.data.length-1]
+      const first = this.data[0]
+      console.log('last element',last)
+      console.log('first element',first)
+      return last
+    }
   }
 }
+
+const jude = new Queue
+
+jude.addLifo(100)
+jude.addLifo(200)
+jude.addLifo(300)
+jude.addLifo(400)
+jude.peek()
+jude.checkEmpty()
+jude.removeLifo()
+jude.removeLifo()
+jude.removeLifo()
+jude.removeLifo()
+jude.checkEmpty()
 
 ```
 
