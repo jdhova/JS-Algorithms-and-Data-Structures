@@ -457,81 +457,102 @@ jude.checkEmpty()
 
 ```
 
-#### Stacks Version 2
+### Stack and Queue compbined
 
 ```
-class Stack {
+
+class Queue {
   constructor() {
-    this.data = [];
-    this.count = 0;
+    this.data = []
   }
 
-  add(element) {
-    this.data.push(element);
-    console.log(`${element} is added to Stack`);
+
+  add(element){
+    this.data.unshift(element)
+    console.log(`adding ${element} to the data structure`)
+    console.log(this.data)
   }
 
-  remove() {
-    if (this.data.length == 0) return undefined;
-    const rem = this.data.pop();
-    console.log(`${rem} is removed from stack`);
-  }
-
-  peek() {
-    const peek = this.data[this.data.length - 1];
-    console.log(`We have ${peek} at the top level of stack`);
-    return peek;
-  }
-
-  checkEmpty() {
-    if (!this.data.length) {
-      console.log('Stack empty');
-    } else {
-      console.log('Stack full');
-    }
-  }
-
-  printStack() {
-    let str = '';
-    for (let x = 0; x < this.data.length; x++) {
-      // console.log(this.data[2])
-      str += this.data[x] + ' ';
-    }
-    return str;
-  }
-
-  whichStack() {
-    let str = '';
-    for (let x = 0; x < this.data.length; x++) {
-      console.log(this.data[3]);
-    }
-    return str;
-  }
-
-  isCleared() {
-    this.data = [];
-    this.count = 0;
-    console.log('data cleared');
-    return this.data;
+    printSpecificStack(){
+  for(let n in this.data){
+   return this.data[this.data.length -1]
   }
 }
 
-const jude = new Stack();
+printAllStack(){
+  for(let n of this.data){
+    console.log(`list of all elements in Queue ${n}`)
+  }
+}
 
-jude.add(1000);
-jude.add(2000);
-jude.add(3000);
-jude.add(4000);
-console.log(jude.printStack());
-jude.checkEmpty();
-jude.whichStack();
+  remove(){
+    if(!this.data.length) {
+       console.log(`There are ${this.data.length} element in queue data structure`)
 
-jude.remove();
-jude.remove();
+    } else {
+         const rem = this.data.pop(this.data.length -1)
+    console.log(`removing ${rem} from the data structure as queue`)
+     console.log(this.data)
+    }
 
-jude.peek();
-jude.isCleared();
-jude.checkEmpty();
+  }
+
+    move(){
+      if(!this.data.length){
+         console.log(`There are ${this.data.length}  elemts in stack data structure`)
+      } else {
+    const rem = this.data.shift(this.data.length -1)
+    console.log(`removing ${rem} from the data structure as stack`)
+     console.log(this.data)
+      }
+
+  }
+
+
+  peek(){
+
+  if(this.data.length > 0){
+    const first = this.data[this.data.length -1]
+      const last = this.data[0]
+     console.log(`peeking at ${first} from the Queye data structure`)
+
+      console.log(`peeking at ${last} from the Stack data structure`)
+
+}  else {
+  console.log(`There are ${this.data.length} elements in data structure`)
+}
+
+  }
+
+  isEmpty(){
+    if(!this.data.length){
+      console.log(`There are ${this.data.length}  data in structure`)
+    }
+  }
+
+}
+
+const jude = new Queue()
+
+jude.add(100)
+jude.add(200)
+jude.add(300)
+jude.add(400)
+
+console.log(jude.printSpecificStack())
+ jude.printAllStack()
+jude.peek()
+
+jude.remove()
+
+jude.move()
+jude.move()
+jude.move()
+jude.move()
+
+jude.remove()
+jude.peek()
+jude.isEmpty()
 
 ```
 
