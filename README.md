@@ -554,35 +554,98 @@ jude.remove()
 jude.peek()
 jude.isEmpty()
 
+
 ```
 
 ### Linked List
 
-#### Insert First
-
 ```
-class Node {
-  constructor(data, next = null) {
-    this.data = data;
-    this.next = next;
+class Node{
+  constructor(data,next = null){
+    this.data = data
+    this.next = next
   }
 }
 
-class LinkedList {
-  constructor() {
-    this.head = null;
+class LinkedList{
+  constructor(){
+    this.head = null
+    // this.count = 0
   }
-  insertFirst(data) {
-    this.head = new Node(data, this.head);
+
+  insertFirst(data){
+    this.head = new Node(data,this.head)
+  }
+
+  insertLast(data) {
+    let newNode = new Node(data)
+    let current = this.head
+
+    if(!current) {
+      current = newNode
+    } else {
+      while(current.next) {
+        current = current.next
+      }
+      current.next = newNode
+    }
+
+  }
+
+getFirst(){
+  if(!this.head){
+    return
+  } else {
+    return this.head.data
   }
 }
 
-const nodeOne = new Node(7)
-const nodeLast = new Node(20)
+getLast(){
+  if(!this.head){
+    return
+  } else {
+    while(this.head.next) {
+      this.head = this.head.next
+    }
+    return this.head.data
+  }
+}
+
+  printList(){
+    let current = this.head
+    while(current){
+      console.log(current.data)
+      current = current.next
+    }
+  }
+
+  clearAll(){
+    this.head = null
+  }
+
+removeFirst(){
+ if(!this.head) {
+   return
+ } else {
+   this.head = this.head.next
+ }
+}
+
+}
+
 const jude = new LinkedList()
-jude.head = nodeOne
-jude.insertFirst(30)
-console.log(jude)
+
+jude.insertFirst(100)
+jude.insertFirst(200)
+jude.insertFirst(300)
+jude.insertFirst(400)
+jude.insertLast(700)
+jude.removeFirst()
+
+jude.printList()
+console.log('first',jude.getFirst())
+console.log('last',jude.getLast())
+//console.log(jude)
 
 ```
 
