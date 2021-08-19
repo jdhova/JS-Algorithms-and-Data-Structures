@@ -554,7 +554,6 @@ jude.remove()
 jude.peek()
 jude.isEmpty()
 
-
 ```
 
 ### Linked List
@@ -610,7 +609,6 @@ getLast(){
     return this.head.data
   }
 }
-
   printList(){
     let current = this.head
     while(current){
@@ -631,6 +629,29 @@ removeFirst(){
  }
 }
 
+removeLast(){
+  if(!this.head){
+    return
+  }
+
+  if(!this.head.next) {
+    return (this.head = null)
+  }
+
+   let nodeOne = this.head
+   let nodeTwo = this.head.next
+
+while(nodeTwo.next) {
+  nodeOne = nodeTwo
+  nodeTwo = nodeTwo.next
+}
+
+if(!nodeTwo.next){
+   return (nodeOne.next = null)
+}
+ }
+
+
 }
 
 const jude = new LinkedList()
@@ -646,82 +667,6 @@ jude.printList()
 console.log('first',jude.getFirst())
 console.log('last',jude.getLast())
 //console.log(jude)
-
-```
-
-#### Get Last
-
-```
- getLast() {
-    let node1 = this.head;
-    if (!node1) {
-      return;
-    }
-    while (node1) {
-      if (!node1.next) {
-        return node1;
-      }
-      if (node1) {
-        node1 = node1.next;
-      }
-    }
-  }
-
-```
-
-#### Remove First
-
-```
-removeFirst() {
-    if (!this.head) {
-      return null;
-    }
-    if (this.head) {
-      this.head = this.head.next;
-    }
-  }
-
-```
-
-#### Remove Last
-
-```
-removeLast() {
-    if (!this.head) {
-      return;
-    }
-    if (!this.head.next) {
-      return (this.head = null);
-    }
-
-    let nodeOne = this.head;
-    let nodeTwo = this.head.next;
-
-    while (nodeTwo.next) {
-      nodeOne = nodeTwo;
-      nodeTwo = nodeTwo.next;
-    }
-
-    if (!nodeTwo.next) {
-      return (nodeOne.next = null);
-    }
-  }
-}
-
-```
-
-#### Insert Last
-
-```
- insertLast(data) {
-    const lastNode = this.getLast();
-
-    if (!this.head) {
-      this.head = new Node(data);
-    } else {
-      lastNode.next = new Node(data);
-    }
-  }
 
 ```
 
