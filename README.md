@@ -457,7 +457,7 @@ jude.checkEmpty()
 
 ```
 
-### Stack and Queue compbined
+### Stack and Queue combined
 
 ```
 
@@ -630,6 +630,11 @@ removeFirst(){
 }
 
 removeLast(){
+
+   <!-- if(this.head.length <= 1) {
+    return (this.head = null)
+  } -->
+
   if(!this.head){
     return
   }
