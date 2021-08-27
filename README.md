@@ -631,9 +631,6 @@ removeFirst(){
 
 removeLast(){
 
-   <!-- if(this.head.length <= 1) {
-    return (this.head = null)
-  } -->
 
   if(!this.head){
     return
@@ -735,6 +732,8 @@ function midpoint(list) {
   }
 }
 
+
+
 ```
 
 #### Return True if Circular Node and false if not
@@ -756,5 +755,7 @@ function circular(list) {
 }
 
 ```
+
+### Doubly linked list
 
 <!-- Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/) -->
