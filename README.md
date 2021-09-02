@@ -460,99 +460,75 @@ jude.checkEmpty()
 ### Stack and Queue combined
 
 ```
-
 class Queue {
-  constructor() {
+  constructor(){
     this.data = []
   }
 
 
-  add(element){
-    this.data.unshift(element)
-    console.log(`adding ${element} to the data structure`)
-    console.log(this.data)
-  }
+add(element){
+  this.data.unshift(element)
+   console.log('adding',element)
+}
 
-    printSpecificStack(){
-  for(let n in this.data){
-   return this.data[this.data.length -1]
+peek(){
+if(this.data.lenght < 0) {
+  console.log('this data set is empty')
+} else {
+  const pikkie = this.data[0]
+  const pikkio = this.data[this.data.length -1 ]
+  console.log(` the first element in data set is ${pikkie} and last element is ${pikkio}`)
+}
+}
+
+printSpecific(n){
+  if(this.data.lenght < 0){
+    console.log('stack is empty')
+  } else {
+
   }
 }
 
-printAllStack(){
-  for(let n of this.data){
-    console.log(`list of all elements in Queue ${n}`)
-  }
-}
-
-  remove(){
-    if(!this.data.length) {
-       console.log(`There are ${this.data.length} element in queue data structure`)
-
-    } else {
-         const rem = this.data.pop(this.data.length -1)
-    console.log(`removing ${rem} from the data structure as queue`)
-     console.log(this.data)
-    }
-
-  }
-
-    move(){
-      if(!this.data.length){
-         console.log(`There are ${this.data.length}  elemts in stack data structure`)
-      } else {
-    const rem = this.data.shift(this.data.length -1)
-    console.log(`removing ${rem} from the data structure as stack`)
-     console.log(this.data)
-      }
-
-  }
-
-
-  peek(){
-
-  if(this.data.length > 0){
-    const first = this.data[this.data.length -1]
-      const last = this.data[0]
-     console.log(`peeking at ${first} from the Queye data structure`)
-
-      console.log(`peeking at ${last} from the Stack data structure`)
-
-}  else {
-  console.log(`There are ${this.data.length} elements in data structure`)
-}
-
-  }
-
-  isEmpty(){
-    if(!this.data.length){
-      console.log(`There are ${this.data.length}  data in structure`)
+print(){
+  if(this.data.length < 0){
+    console.log('data set is empty')
+  } else {
+    for (let n of this.data) {
+       console.log(n)
     }
   }
+}
+
+
+erase(){
+  return this.data = null
 
 }
 
-const jude = new Queue()
+remove(){
+  if (this.data.lenght < 0){
+    console.log('data is empty')
+  } else {
+    const rem = this.data.pop()
+    const remm = this.data.shift()
+    console.log(`first element removed is FIFO ${rem}`)
+    console.log(` last element removed is LIFO ${remm}`)
+  }
+}
+
+}
+
+const jude = new Queue
 
 jude.add(100)
 jude.add(200)
 jude.add(300)
 jude.add(400)
-
-console.log(jude.printSpecificStack())
- jude.printAllStack()
-jude.peek()
-
-jude.remove()
-
-jude.move()
-jude.move()
-jude.move()
-jude.move()
-
+jude.add(500)
 jude.remove()
 jude.peek()
-jude.isEmpty()
+jude.print()
+jude.erase()
 
 ```
 
