@@ -20,20 +20,17 @@
 //   return str.replace(/[ˆ\w]/g, '').toLowerCase().split('').sort().join('');
 // };
 
-const anagrams = (stringA, stringB) => {
-  return cleanStr(stringA) === cleanStr(stringB);
-};
-
-const cleanStr = (str) => {
-  return str.replace(/[ˆ\w]/g, '').split('').sort().join('');
-};
-
-const anagrams = (stringA, stringB) => {
-  return cleanStr(stringA) === cleanStr(stringB);
-};
-
-const cleanStr = (str) => {
-  return str.replace(/[ˆ\w]/g, '').split('').sort().join('');
-};
+// const anagrams = (stringA, stringB) => {
+//   return cleanStr(stringA) === cleanStr(stringB);
+// };
+// const anagrams = (stringA, stringB) => {
+//   return cleanStr(stringA) === cleanStr(stringB);
+// };
+// const anagrams = (stringA, stringB) => {
+//   return cleanStr(stringA) === cleanStr(stringB);
+// };
+// const anagrams = (stringA, stringB) => {
+//   return cleanStr(stringA) === cleanStr(stringB);
+// };
 
 module.exports = anagrams;
